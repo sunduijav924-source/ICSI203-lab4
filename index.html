@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="mn">
 <head>
   <meta charset="UTF-8">
   <title>Sunduijav Davaajav's - CV</title>
@@ -10,132 +11,172 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    body
-     {
+    body {
       display: flex;
-      background-color: #f6f8fa;
-      color: #333;
+      gap: 20px;
+      max-width: 1100px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 24px;
+      background: #edf1f2;
+      color: #26343a;
     }
-
-
 
     .left-section {
-      width: 35%;
-      background-color: #dbe7f4;
-      padding: 30px;
+      flex: 0 0 32%;
+      padding: 28px 26px;
+      background: #dce9e7;
+      border-top: 5px solid #c46b4e;
     }
-  .right-section{
-  position: relative;
-  background:#fff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.08);
-}
 
-.right-section {
-  width: 65%;
-  background-color: #fff;
-  padding: 40px;
+    .right-section {
+      flex: 1;
+      min-width: 0;
+      padding: 34px 38px;
+      background: #fff;
+      border-top: 5px solid #1a4a7a;
+      box-shadow: 0 8px 28px rgba(38, 52, 58, .09);
+    }
 
-  
-  border: 60px solid transparent;            
-  border-image: url('hee.jpg') 100 round;
-  border-image-slice: 100;                   
-  border-image-repeat: round;                
-  border-radius: 20px;                       
-}
-
-
-
-
-
-
-
+    .profile-pic {
+      text-align: center;
+    }
 
     .profile-pic img {
       width: 120px;
       height: 120px;
+      border: 4px solid #fff;
       border-radius: 50%;
-      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .left-section > div + div {
+      margin-top: 20px;
     }
 
     .section-title {
-      font-weight: bold;
+      display: block;
+      margin: 0 0 8px;
       color: #1a4a7a;
-      margin-top: 25px;
-      margin-bottom: 10px;
       font-size: 16px;
-      border-bottom: 2px solid #1a4a7a;
-      display: inline-block;
+      font-weight: bold;
+    }
+
+    .profile p, .education p {
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .left-section p, .left-section li {
+      color: #334348;
       font-size: 13px;
-      line-height: 1.6;
-      color: #333;
+      line-height: 1.65;
     }
 
     .left-section ul {
       margin-top: 5px;
-      list-style-type: none;
-    }
-
-    .right-section {
-      width: 65%;
-      background-color: #fff;
-      padding: 40px;
+      list-style: none;
     }
 
     .header {
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #dce3e4;
       text-align: center;
-      margin-bottom: 30px;
     }
 
     .header h1 {
-      font-size: 32px;
-      letter-spacing: 2px;
       color: #1a4a7a;
+      font-size: 32px;
+      line-height: 1.2;
     }
 
     .contact-info {
-      font-size: 13px;
-      margin-top: 5px;
-      color: #555;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      color: #58666b;
+      font-size: 12px;
+    }
+
+    .contact-primary, .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 14px;
+    }
+
+    .contact-info a {
+      color: #1a4a7a;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-info a:focus-visible {
+      outline: 2px solid #c46b4e;
+      outline-offset: 3px;
     }
 
     .work-experience, .references {
-      margin-top: 30px;
+      margin-top: 18px;
     }
 
     .job {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      padding-left: 14px;
+      border-left: 2px solid #c46b4e;
     }
 
     .job h4 {
-      color: #1a4a7a;
       margin-bottom: 5px;
+      color: #1a4a7a;
+      font-size: 15px;
     }
 
     .job span {
+      color: #727f83;
       font-size: 12px;
-      color: #777;
     }
-    
+
+    .job p, .job li {
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .job p {
+      margin-top: 7px;
+    }
 
     .job ul {
-      margin-top: 8px;
-      margin-left: 20px;
+      margin: 7px 0 0 18px;
     }
 
-    .reference
-     {
+    .reference {
       margin-top: 10px;
     }
 
-    .reference p 
-    {
+    .reference p {
       font-size: 13px;
       line-height: 1.5;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        flex-direction: column;
+        gap: 14px;
+        padding: 14px;
+      }
+
+      .left-section, .right-section {
+        flex-basis: auto;
+        padding: 24px;
+      }
+
+      .header h1 {
+        font-size: 27px;
+      }
     }
   </style>
 </head>
@@ -145,66 +186,87 @@
       <img src="visa.jpg" alt="Profile Picture">
     </div>
 
-    <div class="profile">
-      <h3 class="section-title">PROFILE</h3>
-      <p>Даваажав овогтой Сундуйжав гэдэг.МУИС-ын программ хангамжийн хөтөлбөрийн 2-р түвшний оюутан.Шинийг мэдэж үргэлж суралцан өөрийгөө хөгжүүлэхийг хүсдэг.Би үргэлж аливаа асуудал түүний шийдлийг олохыг эрмэлздэг.
-
-      </p>
-    </div>
-
     <div class="skills">
-      <h3 class="section-title">SKILLS</h3>
+      <h3 class="section-title">Ур чадвар</h3>
       <ul>
         <li>Логиктой сэтгэлгээ</li>
-        <li>Программын алгоритмыг зөв цэггцтэй бодож чадна.</li>
+        <li>Программын алгоритмыг зөв цэгцтэй бодож чадна.</li>
         <li>Бусадтай хамтран ажиллах чадвартай.</li>
         <li>Аливаа асуудлын учрыг олохыг үргэлж эрмэлздэг</li>
         <li>Компьютерын ухаан,сүлжээний анхан дунд түвшний мэдэгдэхүүнтэй.</li>
         <li>Программчилалын C хэл,Python,HTML,CSS </li>
+        <li>Өгөгдлийн сан дээр ажиллах чадвартай.</li>
         
       </ul>
     </div>
 
     <div class="software">
-      <h3 class="section-title">SOFTWARE</h3>
+      <h3 class="section-title">Техникийн ур чадвар</h3>
       <ul>
         <li>MS Office (Word, Excel, PowerPoint)</li>
         <li>Ubuntu OS</li>
         <li>Mysql</li>
         <li>Github and Gitlab</li>
         <li>Docker</li>
-         <li>Wireshark</li>
+        <li>Wireshark</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+        <li>Next.js</li>
+        
+
 
       </ul>
     </div>
 
     <div class="languages">
-      <h3 class="section-title">LANGUAGES</h3>
-      <p>English | Mongolia </p>
+      <h3 class="section-title">ХЭЛ</h3>
+      <ul>
+        <li>Монгол хэл (Эх хэл)</li>
+        <li>Англи хэл (B1-B2)</li>
+        <li>Deutsch (A1)</li>
+      </ul>
     </div>
   </div>
 
   <div class="right-section">
     <div class="header">
-      <h1>Sunduijav Davaajav </h1>
-      <p class="contact-info">МУИС-МТЭС-МКУТ-Программ хангамж    | +976 80180987 | sunduijavd924@gmail.com |</p>
+      <h1>Сундуйжав Даваажав </h1>
+      <div class="contact-info">
+        <div class="contact-primary">
+          <span>МУИС · МТЭС · Программ хангамж</span>
+          <span>+976 80180987</span>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:sunduijavd924@gmail.com">sunduijavd924@gmail.com</a>
+          <a href="https://github.com/sunduijav924-source/" target="_blank" rel="noopener noreferrer">github.com/sunduijav924-source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile">
+      <h3 class="section-title">Товч танилцуулга</h3>
+      <p>Даваажав овогтой Сундуйжав. МУИС-ийн программ хангамжийн хөтөлбөрийн 3-р түвшний оюутан. Шинийг сурч, өөрийгөө хөгжүүлэх сонирхолтой бөгөөд асуудлыг шийдвэрлэхийг эрмэлздэг.</p>
+    </div>
+
+    <div class="education">
+      <h3 class="section-title">Боловсрол</h3>
+      <p>МУИС · МТЭС<br>Программ хангамж, 3-р түвшин<br>Голч дүн: 3.2</p>
     </div>
 
     <div class="work-experience">
-      <h3 class="section-title">WORK EXPERIENCE</h3>
+      <h3 class="section-title">Ажлын туршлага</h3>
 
       <div class="job">
-        <h4>МУИС-ын оюутан дадлагжигч</h4>
-        
-        <ul>
-          <li>Танай байгууллагад ажиллан их сургуульд олж авсан мэдлэгээ бодит орчинд хэрэгжүүлэж байгууллагад үнэ цэнийг өгч давхар туршлага хуримтлуулах зорилготой</li>
-         
-        </ul>
+        <h4>Дадлагажигч · Axis Systems</h4>
+        <span>Баянгол дүүрэг, Улаанбаатар хот, Монгол улс  | 06/2026 - 07/2026</span>
+        <p>Эмнэлгийн байгуулаг эмч нарын шаардлагыг хүлээн авч системийн арын тохиргоо дээр шаардлагын дагуу засвар хийж мөн системийн 
+         талаар  мэдээллийг түгээсэн.
+        </p>
       </div>
 
       <div class="job">
-        <h4>Deli clerk</h4>
-        <span> Broulim's supermarket,Alpine,Wy | 06/2025 - 09/2025</span>
+        <h4>Deli clerk · Broulim's supermarket</h4>
+        <span> Alpine, Wyoming, USA | 06/2025 - 09/2025</span>
         <ul>
           <li>Багтайгаа хамтарч ажиллах,үйлчлүүлэгчдэд үйлчлэх.</li>
           <li>Хоол бусад бүтээгдэхүүн хийх,борлуулах.</li>
@@ -212,8 +274,8 @@
       </div>
 
       <div class="job">
-        <h4>Угтагч (recepionist)</h4>
-        <span>Өсөх-од ширээний теннисний клуб,Улаанбаатар хот, Монгол улс  | 12/2022 - 09/2024</span>
+        <h4>Угтагч · Өсөх-од ширээний теннисний клуб</h4>
+        <span>Баянзүрх дүүрэг,Улаанбаатар хот, Монгол улс  | 12/2022 - 09/2024</span>
         <ul>
           <li>Угтагч,цэвэрлэгч,мэдээлэл түгээгч,туслах багш</li>
           <li>B-зэрэглэлын шүүгч </li>
@@ -223,14 +285,17 @@
     </div>
 
     <div class="references">
-      <h3 class="section-title">REFERENCES</h3>
+      <h3 class="section-title">Лавлагаа</h3>
       <div class="reference">
-        <p><strong>Angela Aitken</strong><br>HR, Company<br>Tel: 820 1273 1232<br>Email: angelaaitken@gmail.com</p>
-      </div>
-      <div class="reference">
-        <p><strong>Энх-Од </strong><br>CEO, Company<br>Tel: 9411 8300<br>Email:enhod122@gmail.com</p>
-      </div>
+        <p><strong>Алтан-Од</strong><br>Сургалтын албаны дарга<br>Утас: 99777041<br>Email: axis.altanod@gmail.com</p>
     </div>
+      <div class="reference">
+        <p><strong>Angela Aitken</strong><br>Хүний нөөцийн менежер<br>Утас: (307) 713-0072<br>Email: angelaaitken@gmail.com</p>
+      </div>
+      <div class="reference">
+        <p><strong>Энх-Од </strong><br>Үүсгэн байгуулагч,Ерөнхий захирал <br>Утас: 9411 8300<br>Email:enhod122@gmail.com</p>
+      </div>
+      
   </div>
 </body>
 </html>
